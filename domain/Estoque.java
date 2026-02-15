@@ -70,8 +70,8 @@ public class Estoque {
 
     public void retirarProdutoCompleto() {
         if (produtoEntrada != null) {
-            System.out.println("\n" +
-                    "--- Deseja retirar alguma quantidade em estoque ou tirar o produto do estoque? ---");
+            System.out.println(
+                    "\n" + "--- Deseja retirar alguma quantidade em estoque ou tirar o produto do estoque? ---");
             String acaoParaRetirarProduto = input.next().toLowerCase();
             String verificacaoSeCompleto = "produto";
             String verificacaoSeQuantidade = "estoque";
