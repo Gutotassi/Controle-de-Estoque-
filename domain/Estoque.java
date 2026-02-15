@@ -134,7 +134,7 @@ public class Estoque {
             System.out.println("--- Altere o valor ---");
             double alterarPrecoProduto = input.nextDouble();
             produtoEntrada.setPrecoDoProduto(alterarPrecoProduto);
-        }else{
+        } else {
             System.out.println("--- Produto inválido tente novamente ---");
             alterarPreco();
         }
