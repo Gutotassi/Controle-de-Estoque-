@@ -1,4 +1,4 @@
-package domain;
+package src.domain;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ public class Estoque {
     int indiceListagem = 1;
     private Produtos produtoEntrada;
     ArrayList<Produtos> produtos = new ArrayList<Produtos>();
-    private Scanner input = new Scanner(System.in);
+    private final Scanner input = new Scanner(System.in);
 
     public void cadastrarProdutos() {
         System.out.println("\n" +

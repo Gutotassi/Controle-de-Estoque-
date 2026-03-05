@@ -1,5 +1,7 @@
-import domain.Estoque;
-import domain.MenuInterativo;
+package src.main;
+
+import src.domain.Estoque;
+import src.domain.MenuInterativo;
 
 public class Main {
     public static void main(String[] args) {

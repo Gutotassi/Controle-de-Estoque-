@@ -1,11 +1,11 @@
-package domain;
+package src.domain;
 
 import java.util.Scanner;
 
 public class MenuInterativo {
     private int numeroDoMenuInterativo = 1;
-    private Estoque estoque;
-    private Scanner input = new Scanner(System.in);
+    private final Estoque estoque;
+    private final Scanner input = new Scanner(System.in);
 
     public MenuInterativo(Estoque estoque) {
         this.estoque = estoque;
