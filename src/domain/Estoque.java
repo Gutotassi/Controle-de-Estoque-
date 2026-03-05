@@ -104,9 +104,9 @@ public class Estoque {
         for (Produtos percorrendoListaDeProdutos : produtos) {
             System.out.println(indiceListagem + "- " + percorrendoListaDeProdutos.getNomeProduto() + " "
                     + " Valor Unítario -- R$ "
-                    + percorrendoListaDeProdutos.getPrecoDoProduto() + " Valor Total -- R$ "
-                    + percorrendoListaDeProdutos.getPrecoDoProduto()
-                            * percorrendoListaDeProdutos.getQuantidadeProdutoEmEstoque()
+                    + String.format("%.2f", percorrendoListaDeProdutos.getPrecoDoProduto()) + " Valor Total -- R$ "
+                    + String.format("%.2f", percorrendoListaDeProdutos.getPrecoDoProduto()
+                    * percorrendoListaDeProdutos.getQuantidadeProdutoEmEstoque())
                     + " " + " Quantidade em estoque "
                     + percorrendoListaDeProdutos.getQuantidadeProdutoEmEstoque());
             indiceListagem++;

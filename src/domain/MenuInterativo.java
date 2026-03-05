@@ -1,5 +1,6 @@
 package src.domain;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuInterativo {
@@ -24,12 +25,21 @@ public class MenuInterativo {
     }
 
     public void escolherAcao() {
-        while (numeroDoMenuInterativo < 6 && numeroDoMenuInterativo > 0) {
-            imprimeMenu();
-            numeroDoMenuInterativo = input.nextInt();
-            selecionarAcao(numeroDoMenuInterativo);
+        while(true){
+            try{
+                while (numeroDoMenuInterativo < 6 && numeroDoMenuInterativo > 0) {
+                    imprimeMenu();
+                    numeroDoMenuInterativo = input.nextInt();
+                    selecionarAcao(numeroDoMenuInterativo);
+                }
+                input.close();
+                break;
+            }
+            catch (InputMismatchException | NullPointerException e){
+                System.out.println("Error: " + e.getMessage());
+                input.nextLine();
+            }
         }
-        input.close();
     }
 
     public void selecionarAcao(int numeroInterativoParaAcao) {
