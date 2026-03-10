@@ -16,7 +16,9 @@ public class ConnectionFactory {
             try {
                 Properties properties = loadProperties();
                 String url = properties.getProperty("db.url");
-                connection = DriverManager.getConnection(url);
+                String user = properties.getProperty("db.user");
+                String password = properties.getProperty("db.password");
+                connection = DriverManager.getConnection(url, user, password);
             }
             catch (SQLException e){
                 throw new DatabaseException(e.getMessage());
